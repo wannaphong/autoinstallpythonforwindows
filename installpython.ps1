@@ -1,3 +1,4 @@
+Write-Host -Object 'Auto-install Python for Windows';
 $py = Read-Host 'Python install ? (3 or 2)'
 $Arch = (Get-Process -Id $PID).StartInfo.EnvironmentVariables["PROCESSOR_ARCHITECTURE"];
 switch ($py) 
