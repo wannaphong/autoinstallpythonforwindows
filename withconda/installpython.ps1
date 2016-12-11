@@ -48,5 +48,17 @@ switch ($py)
 			[System.Diagnostics.Process]::Start("$PSScriptRoot\Miniconda2-latest-Windows-x86_64.exe")
 
 		}
+		Write-Host "Press any key to continue ..."
+		$x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+		Write-Host
+		Write-Host "A"
+		Write-Host "B"
+		Write-Host "C"
+		$url = "https://download.microsoft.com/download/7/9/6/796EF2E4-801B-4FC4-AB28-B59FBF6D907B/VCForPython27.msi"
+		$output = "$PSScriptRoot\VCForPython27.msi"
+		$start_time = Get-Date
+		Invoke-WebRequest -Uri $url -OutFile $output
+		Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
+		[System.Diagnostics.Process]::Start("$PSScriptRoot\VCForPython27.msi")
 	}
 }
