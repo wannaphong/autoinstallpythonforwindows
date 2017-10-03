@@ -1,1 +1,1 @@
-https://www.python.org/ftp/python/2.7.12/python-2.7.12.msi
+https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi
